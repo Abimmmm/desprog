@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('img/bunga1.png');
+    background-size: cover;
+    background-blend-mode: overlay;
+    line-height: 1.65;
+}
+
+/* container flexbox */
+.container-satu {
+    width: 1000px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+/* sidebar kiri */
+.sidebar-satu {
+    flex: 1;
+    background: #f7f9fc;
+    padding: 15px;
+    border: 2px solid #ddd;
+}
+
+.sidebar-satu h3 {
+    margin-bottom: 10px;
+}
+
+.sidebar-satu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-satu li {
+    margin: 8px 0;
+}
+
+.sidebar-satu a {
+    text-decoration: none;
+    color: #0066cc;
+    transition: 0.3s;
+}
+
+.sidebar-satu a:hover {
+    color: #e45765;
+    font-weight: bold;
+}
+
+/* konten utama */
+.kolom-utama {
+    flex: 3;
+    padding: 15px;
+}
+
+.kolom-utama h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* sidebar kanan */
+.sidebar-dua {
+    flex: 1;
+    background: #f7f9fc;
+    padding: 15px;
+    border: 2px solid #ddd;
+}
+
+.sidebar-dua h3 {
+    margin-bottom: 10px;
+}
