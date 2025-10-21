@@ -1,0 +1,15 @@
+<?php
+$umur;
+if (isset($umur)&& $umur >= 10) {
+    echo "Anda Sudah dewasa";
+}else {
+    echo "Anda belum dewasa atau variabel 'umur' tidak ditemukan";
+}
+
+$data = array("nama" => "jane", "usia" => 25);
+if (isset($data["nama"])) {
+    echo "Nama : " . $data["nama"];
+}else {
+    echo "Variabel 'nama' tidak ditemukan dalam array";
+}
+?>
