@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookHaven - Toko Buku Online</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery-ui-1.14.1.custom/jquery-ui.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <script>
+    $(document).ready(function() {
+    $('.fade-in').each(function(index) {
+        $(this).css('opacity', '0');
+        $(this).delay(index * 300).animate({
+            opacity: 1
+        }, 1000, 'swing');
+    });
+});
+  </script>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="logo">
+          <svg
+            class="icon"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 504.123 504.123"
+            xml:space="preserve"
+            width="50px"
+            height="50px"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <circle
+                style="fill: #324a5e"
+                cx="252.062"
+                cy="252.062"
+                r="252.062"
+              ></circle>
+              <rect
+                x="300.505"
+                y="83.102"
+                style="fill: #ff7058"
+                width="54.351"
+                height="165.022"
+              ></rect>
+              <rect
+                x="225.28"
+                y="122.092"
+                style="fill: #ffd05b"
+                width="54.351"
+                height="126.425"
+              ></rect>
+              <rect
+                x="150.449"
+                y="160.689"
+                style="fill: #84dbff"
+                width="54.351"
+                height="87.434"
+              ></rect>
+              <path
+                style="fill: #ffffff"
+                d="M371.397,394.634H99.249v-69.317h272.542c19.298,0,34.658,15.36,34.658,34.658l0,0 C406.055,379.274,390.695,394.634,371.397,394.634z"
+              ></path>
+              <g>
+                <path
+                  style="fill: #e6e9ee"
+                  d="M241.034,337.92h157.145c-0.394-0.788-1.182-1.182-1.969-1.969H241.034h155.175 c-0.788-0.788-1.182-1.182-1.969-1.969H241.034V337.92z"
+                ></path>
+                <path
+                  style="fill: #e6e9ee"
+                  d="M241.034,345.797h161.871c-0.394-0.788-0.788-1.182-0.788-1.969H241.034h161.083 c-0.394-0.788-0.788-1.182-1.182-1.969H241.034V345.797z"
+                ></path>
+                <path
+                  style="fill: #e6e9ee"
+                  d="M241.034,354.068h164.628c0-0.788-0.394-1.182-0.394-1.969H241.034h163.84 c0-0.788-0.394-1.182-0.394-1.969H241.034V354.068z"
+                ></path>
+                <path
+                  style="fill: #e6e9ee"
+                  d="M241.034,361.945h165.022c0-0.788,0-1.182,0-1.969l0,0H241.034h165.022c0-0.788,0-1.182,0-1.969 H241.034V361.945z"
+                ></path>
+                <path
+                  style="fill: #e6e9ee"
+                  d="M241.034,369.822H404.48c0-0.788,0.394-1.182,0.394-1.969h-163.84h163.84 c0-0.788,0.394-1.182,0.394-1.969H241.034V369.822z"
+                ></path>
+                <path
+                  style="fill: #e6e9ee"
+                  d="M241.034,378.092h159.902c0.394-0.788,0.788-1.182,1.182-1.969H241.034h161.083 c0.394-0.788,0.788-1.182,0.788-1.969H241.034V378.092z"
+                ></path>
+                <path
+                  style="fill: #e6e9ee"
+                  d="M241.034,385.969H394.24c0.788-0.788,1.575-1.182,1.969-1.969H241.034h155.175 c0.788-0.788,1.182-1.182,1.969-1.969H241.034V385.969z"
+                ></path>
+              </g>
+              <path
+                style="fill: #f1543f"
+                d="M94.917,390.302h276.48c16.935,0,30.72-13.785,30.72-30.326c0-16.542-13.785-30.326-30.72-30.326 H94.917v-7.877h276.48c21.268,0,38.597,16.935,38.597,38.203s-17.329,38.203-38.597,38.203H94.917V390.302z"
+              ></path>
+              <path
+                style="fill: #e6e9ee"
+                d="M409.994,244.185c-0.394-1.575-1.182-2.757,0-3.938H132.726c-18.905,0-34.265,15.36-34.265,34.265 s15.36,34.265,34.265,34.265h277.662c-1.182-1.182-0.788-1.969,0-3.938C396.997,286.72,396.997,262.302,409.994,244.185z"
+              ></path>
+              <path
+                style="fill: #4cdbc4"
+                d="M409.994,304.837H133.908c-16.935,0-30.72-13.785-30.72-30.326c0-16.542,13.785-30.326,30.72-30.326 h276.48v-7.877h-276.48c-21.268,0-38.597,16.935-38.597,38.203c0,21.268,17.329,38.203,38.597,38.203h276.48v-7.877H409.994z"
+              ></path>
+              <g>
+                <path
+                  style="fill: #acb3ba"
+                  d="M235.126,252.455v9.452h166.991c0.788-3.151,1.969-6.302,3.545-9.452H235.126z"
+                ></path>
+                <path
+                  style="fill: #acb3ba"
+                  d="M268.603,279.237h131.938c-0.394-3.151-0.394-6.302,0-9.452H268.603V279.237z"
+                ></path>
+                <path
+                  style="fill: #acb3ba"
+                  d="M205.982,296.566h199.68c-1.575-3.151-2.363-6.302-3.545-9.452H205.982V296.566z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+          Book<span>Haven</span></a
+        >
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="katalog.php">Katalog</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content fade-in">
+        <h1>Temukan Buku Favoritmu</h1>
+        <p>Ribuan koleksi buku terbaik dari berbagai genre</p>
+        <div class="search-box">
+          <input
+            type="text"
+            placeholder="Cari judul buku, penulis, atau ISBN..."
+          />
+          <button>Cari</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="container">
+        <h2 class="section-title">Kategori Populer</h2>
+        <div class="category-grid">
+          <div class="category-card">
+            <div class="category-icon">
+              <svg
+                height="64px"
+                width="64px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 280.027 280.027"
+                xml:space="preserve"
+                width="64px"
+                height="64px"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path
+                      style="fill: #3f95d4"
+                      d="M52.505,35.003h35.003c4.839,0,8.751,3.929,8.751,8.768v175c0,4.839-3.912,8.751-8.751,8.751H52.505 c-4.839,0-8.751-3.912-8.751-8.751V43.763C43.754,38.933,47.666,35.003,52.505,35.003z"
+                    ></path>
+                    <path
+                      style="fill: #367fb4"
+                      d="M61.256,218.771V43.763c0-4.83,3.912-8.76,8.751-8.76H52.505c-4.839,0-8.751,3.929-8.751,8.76 v175.008c0,4.839,3.912,8.751,8.751,8.751h17.502C65.168,227.522,61.256,223.602,61.256,218.771z"
+                    ></path>
+                    <path
+                      style="fill: #d99666"
+                      d="M0,227.522h280.027v52.505H0V227.522z"
+                    ></path>
+                    <path
+                      style="fill: #f7cb8b"
+                      d="M43.754,166.266h52.505v35.021H43.754V166.266z"
+                    ></path>
+                    <path
+                      style="fill: #349886"
+                      d="M105.01,0h52.505c4.839,0,8.751,3.929,8.751,8.768v210.003c0,4.839-3.912,8.751-8.751,8.751H105.01 c-4.839,0-8.751-3.912-8.751-8.751V8.76C96.259,3.929,100.171,0,105.01,0z"
+                    ></path>
+                    <path
+                      style="fill: #9accc3"
+                      d="M122.512,192.528h17.502V70.007h-17.502C122.512,70.007,122.512,192.528,122.512,192.528z M122.512,35.003v17.502h17.502V35.003H122.512z"
+                    ></path>
+                    <path
+                      style="fill: #e2574c"
+                      d="M175.017,52.505h52.505c4.839,0,8.751,3.929,8.751,8.751v157.515c0,4.839-3.912,8.751-8.751,8.751 h-52.505c-4.839,0-8.751-3.912-8.751-8.751V61.256C166.266,56.434,170.178,52.505,175.017,52.505z"
+                    ></path>
+                    <rect
+                      x="43.754"
+                      y="166.266"
+                      style="fill: #d2ad77"
+                      width="17.502"
+                      height="35.021"
+                    ></rect>
+                    <path
+                      style="fill: #2c8172"
+                      d="M113.761,218.771V8.76c0-4.83,3.912-8.76,8.751-8.76H105.01c-4.839,0-8.751,3.929-8.751,8.76 v210.012c0,4.839,3.912,8.751,8.751,8.751h17.502C117.673,227.522,113.761,223.602,113.761,218.771z"
+                    ></path>
+                    <path
+                      style="fill: #c04a40"
+                      d="M183.768,218.771V61.256c0-4.822,3.912-8.751,8.751-8.751h-17.502c-4.839,0-8.751,3.929-8.751,8.751 v157.515c0,4.839,3.912,8.751,8.751,8.751h17.502C187.68,227.522,183.768,223.602,183.768,218.771z"
+                    ></path>
+                    <path
+                      style="fill: #f7cb8b"
+                      d="M166.266,140.014h70.007V105.01h-70.007V140.014z M166.266,87.509v8.768h70.007v-8.768H166.266z"
+                    ></path>
+                    <g>
+                      <rect
+                        x="166.266"
+                        y="87.509"
+                        style="fill: #d2ad77"
+                        width="17.502"
+                        height="8.768"
+                      ></rect>
+                      <rect
+                        x="166.266"
+                        y="105.01"
+                        style="fill: #d2ad77"
+                        width="17.502"
+                        height="35.003"
+                      ></rect>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <h3>Fiksi</h3>
+            <p>Novel & Cerita</p>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">
+              <svg
+                height="55px"
+                width="55px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 280.028 280.028"
+                xml:space="preserve"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path
+                      style="fill: #bf392c"
+                      d="M26.253,0h227.522c14.5,0,26.253,11.752,26.253,26.253v227.522c0,14.5-11.752,26.253-26.253,26.253 H26.253C11.752,280.027,0,268.275,0,253.775V26.253C0,11.752,11.752,0,26.253,0z"
+                    ></path>
+                    <path
+                      style="fill: #e2574c"
+                      d="M35.003,52.505h218.771c14.5,0,26.253,11.752,26.253,26.253v175.017 c0,14.5-11.752,26.253-26.253,26.253H35.003C35.003,280.027,35.003,52.505,35.003,52.505z"
+                    ></path>
+                    <path
+                      style="fill: #b5463d"
+                      d="M96.259,131.263v26.253H210.02v-26.253H96.259z M96.259,192.519H210.02v-17.502H96.259V192.519z"
+                    ></path>
+                    <path
+                      style="fill: #e4e7e7"
+                      d="M35.003,17.502h210.021c9.661,0,17.502,7.841,17.502,17.502v17.502H35.003 c-9.661,0-17.502-7.841-17.502-17.502S25.342,17.502,35.003,17.502z"
+                    ></path>
+                    <path
+                      style="fill: #e5685e"
+                      d="M35.003,52.505h8.751v227.522h-8.751V52.505z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <h3>Non-Fiksi</h3>
+            <p>Pengetahuan & Fakta</p>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">
+              <svg
+                height="60px"
+                width="60px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 280.028 280.028"
+                xml:space="preserve"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path
+                      style="fill: #2b414d"
+                      d="M166.266,26.253h-52.505c-9.661,0-17.502,7.841-17.502,17.502v17.502h17.502v-8.742 c0-4.83,3.92-8.76,8.751-8.76h35.003c4.839,0,8.751,3.929,8.751,8.768v8.733h17.502V43.754 C183.768,34.093,175.927,26.253,166.266,26.253z"
+                    ></path>
+                    <path
+                      style="fill: #475f6c"
+                      d="M17.502,61.256h236.273c9.661,0,17.502,7.841,17.502,17.502v157.515 c0,9.661-7.841,17.502-17.502,17.502H26.253c-9.661,0-17.502-7.841-17.502-17.502V78.758C8.751,69.097,7.841,61.256,17.502,61.256z "
+                    ></path>
+                    <path
+                      style="fill: #2b414d"
+                      d="M17.502,61.256h245.024c9.661,0,17.502,7.841,17.502,17.502v52.505 c0,9.661-7.841,17.502-17.502,17.502H17.502C7.841,148.765,0,140.924,0,131.263V78.758C0,69.097,7.841,61.256,17.502,61.256z"
+                    ></path>
+                    <path
+                      style="fill: #efc75e"
+                      d="M52.505,210.021c0,0,6.747,17.502,13.398,17.502c6.476,0,12.855-17.502,12.855-17.502V61.256H52.505 V210.021z M201.27,61.256v148.765c0,0,6.747,17.502,13.398,17.502c6.467,0,12.855-17.502,12.855-17.502V61.256H201.27z"
+                    ></path>
+                    <path
+                      style="fill: #e4e7e7"
+                      d="M43.754,192.519h43.754v-26.253H43.754V192.519z M192.519,166.266v26.253h43.754v-26.253H192.519z"
+                    ></path>
+                    <path
+                      style="fill: #efc75e"
+                      d="M140.014,87.509c9.661,0,17.502,7.841,17.502,17.502s-7.841,17.502-17.502,17.502 s-17.502-7.841-17.502-17.502S130.353,87.509,140.014,87.509z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <h3>Pendidikan</h3>
+            <p>Buku Pelajaran</p>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">
+              <svg
+                height="64px"
+                width="64px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 280.028 280.028"
+                xml:space="preserve"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path
+                      style="fill: #e2574c"
+                      d="M115.503,177.54L37.48,255.545c-3.588,3.605-3.588,9.416,0,13.004s9.407,3.588,12.995,0 l78.023-78.005c3.597-3.605,3.597-9.416,0-13.004C124.91,173.943,119.09,173.943,115.503,177.54z M242.547,255.545l-78.023-78.005 c-3.588-3.588-9.398-3.588-12.986,0s-3.588,9.398,0,13.004l78.023,78.005c3.588,3.588,9.398,3.588,12.986,0 C246.144,264.961,246.144,259.15,242.547,255.545z"
+                    ></path>
+                    <g>
+                      <polygon
+                        style="fill: #cb4e44"
+                        points="188.318,201.307 162.293,201.307 179.804,218.809 205.82,218.809 "
+                      ></polygon>
+                      <polygon
+                        style="fill: #cb4e44"
+                        points="74.216,218.809 100.224,218.809 117.734,201.307 91.726,201.307 "
+                      ></polygon>
+                    </g>
+                    <path
+                      style="fill: #cb4e44"
+                      d="M140.014,17.539c4.839,0,8.751,3.92,8.751,8.751v210.02c0,4.848-3.912,8.751-8.751,8.751 s-8.751-3.903-8.751-8.751V26.29C131.263,21.459,135.174,17.539,140.014,17.539z"
+                    ></path>
+                    <path
+                      style="fill: #324d5b"
+                      d="M17.502,8.788h245.024c9.661,0,17.502,7.832,17.502,17.502v166.266 c0,9.661-7.841,17.502-17.502,17.502H17.502C7.841,210.058,0,202.217,0,192.556V26.29C0,16.62,7.841,8.788,17.502,8.788z"
+                    ></path>
+                    <path
+                      style="fill: #ebebeb"
+                      d="M26.253,26.29h227.522c4.839,0,8.751,3.92,8.751,8.751v148.765c0,4.848-3.912,8.751-8.751,8.751 H26.253c-4.839,0-8.751-3.903-8.751-8.751V35.041C17.502,30.21,21.413,26.29,26.253,26.29z"
+                    ></path>
+                    <path
+                      style="fill: #e2574c"
+                      d="M96.259,96.297H61.256v70.007h35.003V96.297z"
+                    ></path>
+                    <path
+                      style="fill: #3db39e"
+                      d="M157.515,61.293h-35.003v105.01h35.003V61.293z"
+                    ></path>
+                    <path
+                      style="fill: #26a6d1"
+                      d="M218.771,78.795h-35.003v87.509h35.003V78.795z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <h3>Bisnis</h3>
+            <p>Pengembangan Karir</p>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">
+              <svg
+                height="64px"
+                width="64px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 280.058 280.058"
+                xml:space="preserve"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path
+                      style="fill: #324d5b"
+                      d="M140.027,214.41c-14.491,0-26.253,11.761-26.253,26.253s11.761,26.253,26.253,26.253 c14.491,0,26.253-11.761,26.253-26.253S154.518,214.41,140.027,214.41z M210.034,196.91c-14.491,0-26.253,11.752-26.253,26.253 s11.761,26.253,26.253,26.253c14.491,0,26.253-11.752,26.253-26.253S224.525,196.91,210.034,196.91z M70.02,196.91 c-14.491,0-26.253,11.752-26.253,26.253s11.761,26.253,26.253,26.253s26.253-11.752,26.253-26.253S84.511,196.91,70.02,196.91z"
+                    ></path>
+                    <path
+                      style="fill: #f4b459"
+                      d="M59.536,129.859c44.376-27.346,116.325-27.346,160.709,0s44.376,71.678,0,99.025 s-116.334,27.346-160.709,0S15.152,157.206,59.536,129.859z"
+                    ></path>
+                    <path
+                      style="fill: #324d5b"
+                      d="M41.02,81.222c54.675-32.466,143.339-32.466,198.032,0c54.675,32.466,54.675,85.102,0,117.568 c-54.693,32.474-143.356,32.474-198.032,0C-13.673,166.324-13.673,113.688,41.02,81.222z"
+                    ></path>
+                    <path
+                      style="fill: #e4e7e7"
+                      d="M140.027,13.142c48.331,0,87.509,39.178,87.509,87.509s-39.178,70.007-87.509,70.007 s-87.509-21.676-87.509-70.007S91.696,13.142,140.027,13.142z"
+                    ></path>
+                    <path
+                      style="fill: #3db39e"
+                      d="M189.898,160.768c1.698-5.154,2.634-10.659,2.634-16.364v-43.755 c0-28.992-23.505-52.505-52.505-52.505c-28.992,0-52.505,23.505-52.505,52.505v43.754c0,5.706,0.945,11.21,2.634,16.364 c14.15,6.668,31.319,9.888,49.871,9.888C158.57,170.656,175.739,167.436,189.898,160.768z"
+                    ></path>
+                    <path
+                      style="fill: #ffffff"
+                      d="M140.027,83.147c14.491,0,26.253,11.752,26.253,26.253c0,14.509-11.761,26.261-26.253,26.261 c-14.491,0-26.253-11.752-26.253-26.261C113.774,94.9,125.535,83.147,140.027,83.147z"
+                    ></path>
+                    <path
+                      style="fill: #324d5b"
+                      d="M140.027,100.649c4.839,0,8.751,3.92,8.751,8.751c0,4.839-3.912,8.751-8.751,8.751 s-8.751-3.912-8.751-8.751C131.276,104.57,135.188,100.649,140.027,100.649z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <h3>Anak-Anak</h3>
+            <p>Buku Cerita Anak</p>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">
+              <svg
+                height="64px"
+                width="64px"
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 279.851 279.851"
+                xml:space="preserve"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path
+                      style="fill: #e2574c"
+                      d="M255.361,41.839c-41.444-41.453-82.538-23.339-115.433,6.23 C107.016,18.5,66.264,0.062,24.487,41.839c-32.571,32.553-32.728,84.866,0,117.244C139.57,262.605,139.543,262.421,139.543,262.421 s0.166,0.341,115.809-103.339C288.098,126.704,287.932,74.392,255.361,41.839z"
+                    ></path>
+                    <path
+                      style="fill: #cb4e44"
+                      d="M139.92,48.06l-0.079-0.061v214.168c1.846-1.558,15.419-13.345,115.511-103.094 c32.737-32.369,32.579-84.682,0-117.235C213.908,0.386,172.823,18.5,139.92,48.06z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <h3>Self Help</h3>
+            <p>Pengembangan Diri</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-books">
+      <div class="container">
+        <h2 class="section-title">Buku Terlaris</h2>
+        <div class="books-grid">
+          <div class="book-card">
+            <div class="book-cover">
+              <img src="img/buku.jpg" alt="" srcset="" />
+            </div>
+            <div class="book-info">
+              <h3>Atomic Habits</h3>
+              <p class="book-author">James Clear</p>
+              <div class="book-price">
+                <span class="price">Rp 89.000</span>
+                <button class="add-to-cart">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">
+              <img src="img/buku.jpg" alt="" srcset="" />
+            </div>
+            <div class="book-info">
+              <h3>Sapiens</h3>
+              <p class="book-author">Yuval Noah Harari</p>
+              <div class="book-price">
+                <span class="price">Rp 125.000</span>
+                <button class="add-to-cart">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">
+              <img src="img/buku.jpg" alt="" srcset="" />
+            </div>
+            <div class="book-info">
+              <h3>Rich Dad Poor Dad</h3>
+              <p class="book-author">Robert Kiyosaki</p>
+              <div class="book-price">
+                <span class="price">Rp 95.000</span>
+                <button class="add-to-cart">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-cover">
+              <img src="img/buku.jpg" alt="" srcset="" />
+            </div>
+            <div class="book-info">
+              <h3>The Psychology of Money</h3>
+              <p class="book-author">Morgan Housel</p>
+              <div class="book-price">
+                <span class="price">Rp 105.000</span>
+                <button class="add-to-cart">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo-banner">
+      <div class="promo-content">
+        <h2>Diskon Spesial 30%</h2>
+        <p>Untuk semua buku kategori Self Help & Bisnis</p>
+        <a href="katalog.html" class="promo-btn">Belanja Sekarang</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="katalog.html">Katalog</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Layanan</h3>
+          <ul>
+            <li><a href="#">Cara Pemesanan</a></li>
+            <li><a href="#">Pengiriman</a></li>
+            <li><a href="#">Pengembalian</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Hubungi Kami</h3>
+          <ul>
+            <li>info@bookhaven.com</li>
+            <li>(021) 1234-5678</li>
+            <li>Malang, Indonesia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 BookHaven. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
